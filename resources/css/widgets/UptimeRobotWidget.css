@@ -1,0 +1,83 @@
+/**
+ * Uptime Robot plugin for Craft CMS
+ *
+ * Uptime RobotWidget CSS
+ *
+ * @author    Fred Carlsen
+ * @copyright Copyright (c) 2016 Fred Carlsen
+ * @link      http://sjelfull.no
+ * @package   UptimeRobot
+ * @since     1.0.0
+ */
+
+.uptimerobot-widget-uptime {
+    padding-top: 5px;
+}
+
+.uptimerobot-widget-uptime-number {
+    color: #4DA74D;
+    font-size: 35px;
+}
+
+.uptimerobot-widget-uptime-description {
+    font-size: 14px;
+    display: block;
+    margin-top: 4px;
+}
+
+.uptimerobot-widget-log {
+    padding-top: 10px;
+}
+
+.uptimerobot-widget-log li {
+    transition: opacity 0.25s ease-in-out;
+    clear: both;
+    opacity: 0.5;
+}
+.uptimerobot-widget-log li:after {
+    content:" ";
+    display:block;
+    clear:both;
+}
+
+.uptimerobot-widget-log li:hover {
+    opacity: 1;
+}
+
+.uptimerobot-widget-log li + li {
+    padding-top: 5px;
+}
+
+.uptimerobot-widget-logtype {
+    background-color: #cecece;
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    float: left;
+    display: inline-block;
+    padding: 2px 10px;
+}
+
+    .uptimerobot-widget-logtype.is-Down {
+        background-color: #DB6464;
+    }
+
+    .uptimerobot-widget-logtype.is-Up {
+        background-color: #57A957;
+    }
+
+    .uptimerobot-widget-logtype.is-Started {
+        background-color: #006DCC;
+    }
+
+    .uptimerobot-widget-logtype.is-Paused {
+        background-color: #000;
+    }
+
+.uptimerobot-widget-logdate {
+    color: #b9bfc6;
+    float: right;
+    padding-top: 3px;
+}

@@ -1,0 +1,14 @@
+{
+	"name": "sjelfull/Craft-UptimeRobot",
+	"description": "Integrates with Uptime Robot to monitor the health of your Craft site.",
+	"type": "craft-plugin",
+	"authors": [
+		{
+			"name": "Fred Carlsen",
+			"homepage": "http://sjelfull.no"
+		}
+	],
+	"require": {
+		"composer/installers": "~1.0"
+	}
+}

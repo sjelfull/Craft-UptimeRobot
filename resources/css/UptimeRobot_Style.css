@@ -1,0 +1,17 @@
+/**
+ * Uptime Robot plugin for Craft CMS
+ *
+ * Uptime Robot CSS
+ *
+ * @author    Fred Carlsen
+ * @copyright Copyright (c) 2016 Fred Carlsen
+ * @link      http://sjelfull.no
+ * @package   UptimeRobot
+ * @since     1.0.0
+ */
+
+.uptimerobot-input {
+    width: 80%;
+    display: inline-block;
+    padding: 5px 10px;
+}

@@ -1,0 +1,42 @@
+{#
+/**
+ * Uptime Robot plugin for Craft CMS
+ *
+ * Uptime Robot Settings.twig
+ *
+ * @author    Fred Carlsen
+ * @copyright Copyright (c) 2016 Fred Carlsen
+ * @link      http://sjelfull.no
+ * @package   UptimeRobot
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% includeCssResource "uptimerobot/css/UptimeRobot_Style.css" %}
+{% includeJsResource "uptimerobot/js/UptimeRobot_Script.js" %}
+
+<h2><strong>To set up monitoring for this site, follow these steps:</strong></h2>
+<ol class="uptimerobot-list">
+    <li>Create a monitor by clicking <strong>Add New Monitor</strong> in the Uptime Robot dashboard.</li>
+    <li>Select <strong>Keyword</strong> under Monitor Type.</li>
+    <li>
+        Add these values to their respective settings:<br>
+        <strong>URL (or IP):</strong> <input type="text" value="{{ actionUrl('uptimeRobot/check', { key: settings['accessKey'] }) }}" class="uptimerobot-input"><br/>
+        <strong>Keyword:</strong> UP!<br/>
+        <strong>Alert When:</strong> Keyword Not Exists
+    </li>
+    <li> Under <strong>My Settings</strong>, Browse to API Settings / Monitor-Specific API Keys, click <strong>Show/hide
+            it</strong>, and search for the monitor you just created.
+    </li>
+    <li>Create an API key, copy the key into the settings field under and save.</li>
+    <li>You should be good to go.</li>
+</ol>
+
+{{ forms.textField({
+    label: 'Monitor API Key',
+    instructions: 'Specific for the monitor you created for this site.',
+    id: 'apiKey',
+    name: 'apiKey',
+    value: settings['apiKey']}) }}
