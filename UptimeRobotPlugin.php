@@ -59,7 +59,7 @@ class UptimeRobotPlugin extends BasePlugin
      */
     public function getVersion ()
     {
-        return '1.0.0';
+        return '1.0.1';
     }
 
     /**
@@ -116,7 +116,8 @@ class UptimeRobotPlugin extends BasePlugin
     public function getSettingsHtml ()
     {
         return craft()->templates->render('uptimerobot/UptimeRobot_Settings', array(
-            'settings' => $this->getSettings()
+            'settings' => $this->getSettings(),
+            'checkUrl' => craft()->uptimeRobot->getCheckUrl(),
         ));
     }
 

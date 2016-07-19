@@ -1,10 +1,18 @@
 [
-    {
-        "version": "1.0.0",
-        "downloadUrl": "https://github.com/sjelfull/Craft-UptimeRobot/archive/master.zip",
-        "date": "2016-07-19T11:19:46.342Z",
-        "notes": [
-            "[Added] Initial release"
-        ]
-    }
+  {
+    "version": "1.0.1",
+    "downloadUrl": "https://github.com/sjelfull/Craft-UptimeRobot/archive/master.zip",
+    "date": "2016-07-19T21:19:46.342Z",
+    "notes": [
+      "[Fixed] Removed the CP trigger part of the uptime check URL"
+    ]
+  },
+  {
+    "version": "1.0.0",
+    "downloadUrl": "https://github.com/sjelfull/Craft-UptimeRobot/archive/master.zip",
+    "date": "2016-07-19T11:19:46.342Z",
+    "notes": [
+      "[Added] Initial release"
+    ]
+  }
 ]

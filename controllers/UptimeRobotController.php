@@ -33,11 +33,7 @@ class UptimeRobotController extends BaseController
             $this->returnJson($stats);
         }
 
-        $plugin = craft()->plugins->getPlugin('uptimerobot');
-        if ( !$plugin ) {
-            throw new Exception(Craft::t('No plugin exists with the class “{class}”', array( 'class' => 'uptimerobot' )));
-        }
-        $settings = $plugin->getSettings();
+        $apiKey = craft()->uptimeRobot->getApiKey();
 
         // Make request to API if not cached
         $client = new \Guzzle\Http\Client();
@@ -46,7 +42,7 @@ class UptimeRobotController extends BaseController
             'timeout'         => 30,
             'connect_timeout' => 10,
             'query'           => array(
-                'apiKey'               => $settings->apiKey,
+                'apiKey'               => $apiKey,
                 'logs'                 => 1,
                 'responseTimes'        => 1,
                 'responseTimesAverage' => 1440, // Average response time for the last 24 hours
@@ -96,10 +92,10 @@ class UptimeRobotController extends BaseController
         if ( !$plugin ) {
             throw new Exception(Craft::t('No plugin exists with the class “{class}”', array( 'class' => 'uptimerobot' )));
         }
-        $settings = $plugin->getSettings();
-        $key      = craft()->request->getParam('key');
+        $accessKey = craft()->uptimeRobot->getAccessKey();
+        $key       = craft()->request->getParam('key');
 
-        if ( $settings->accessKey !== $key ) {
+        if ( $accessKey !== $key ) {
             throw new Exception(Craft::t('Access key “{key}” was not valid.', array( 'key' => $key )));
         }
 

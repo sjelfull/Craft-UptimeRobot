@@ -30,6 +30,10 @@ The widget will cache the results for 5 minutes.
 
 ## Uptime Robot Changelog
 
+### 1.0.1 -- 2016.07.19
+
+* [Fixed] Removed the CP trigger part of the uptime check URL
+
 ### 1.0.0 -- 2016.07.19
 
 * Initial release
