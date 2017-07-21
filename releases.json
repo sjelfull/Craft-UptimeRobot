@@ -1,5 +1,13 @@
 [
   {
+    "version": "1.0.2",
+    "downloadUrl": "https://github.com/sjelfull/Craft-UptimeRobot/archive/master.zip",
+    "date": "2017-07-21T21:19:46.342Z",
+    "notes": [
+      "[Fixed] Fixed syntax error in older PHP versions"
+    ]
+  },
+  {
     "version": "1.0.1",
     "downloadUrl": "https://github.com/sjelfull/Craft-UptimeRobot/archive/master.zip",
     "date": "2016-07-19T21:19:46.342Z",
