@@ -17,7 +17,7 @@ class UptimeRobotController extends BaseController
 {
 
     protected $_endpoint      = 'https://api.uptimerobot.com/getMonitors';
-    protected $_cacheDuration = 60 * 5; // Default to 5 minutes
+    protected $_cacheDuration = 300; // Default to 5 minutes
 
     /**
      * @var    bool|array Allows anonymous access to this controller's actions.
